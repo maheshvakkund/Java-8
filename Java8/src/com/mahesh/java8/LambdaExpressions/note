@@ -1,0 +1,36 @@
+Characteristics of Lambda Expression:
+
+1)Lambda expression can take any number of parameters.
+	example: ()->System.out.println("HELLO);
+			 (s)->s.length();
+			 (a,b)->System.out.println(a+b);
+			 
+2)If multiple parameters are there they should be separated by comma.
+	example: (a,b)->System.out.println(a+b)	
+	
+
+3)If only one parameter is available then parantehsis is optional;
+	example:(a)->a.length();  
+			 a->a.length();
+	
+
+4)Type reference,Compiler has the ability to judge the type based on the data recieved
+	Example: (int a,int b) ->System.out.println(a+b);
+			 (a,b)->System.out.println(a+b);
+			
+5)For one statement the braces are optional.
+	Example: ()->System.out.println("hello");
+			 ()->{
+			 		Statement 1;
+					Statement 2;
+					Statement 3;
+				};
+
+6)If lambda expression returns something then we can remove the return keyword.
+	Example: s-> return s.length();
+			 s->s.length();				
+								
+	
+			
+	 
+			 
