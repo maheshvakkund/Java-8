@@ -28,9 +28,6 @@ Characteristics of Lambda Expression:
 
 6)If lambda expression returns something then we can remove the return keyword.
 	Example: s-> return s.length();
-			 s->s.length();				
-								
-	
-			
+			 s->s.length();
 	 
 			 

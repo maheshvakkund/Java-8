@@ -1,0 +1,147 @@
+SUMMARY OF FUNCTIONAL interface:
+
+=========================================================================================================================================================================
+
+1) It should contain only one single abstract method
+
+2) It can contain any number of Static() and default()
+	
+3) It acts as a Type for Lambda Expression.
+	Example: Interf i=()->System.out.println("Hello");
+
+4) It can be used to invoke lambda Expression.
+	Example: i.m1();
+	 
+			 
+
+Example of a Functional interface:
+
+=========================================================================================================================================================================
+
+public interface Interf{
+	public void m1(); -> Single Abstract Method
+	
+	default void m2(){ -> Any number of default and Static methods are allowed
+	}
+	
+	public static void m3(){
+	}
+}
+
+NOTE:All normal interfaces are note Functional interface,A interface with single abstract method is only a functional interface
+
+
+SCENARIOS OF FUNCTIONAL interface:
+
+=========================================================================================================================================================================
+
+SCENARIO 1: VALID
+
+***************************************************
+
+public interface Interf{
+	public void m1(); -> Single Abstract Method
+	
+	default void m2(){ -> Any number of default and Static methods are allowed
+	}
+	
+	public static void m3(){
+	}
+}
+
+
+SCENARIO 2: INVALID (Compile Time Error : No Abstract method found in interface Interf)
+
+***************************************************
+
+@Functionalinterface ->Annotation is used to indicate that its a functional interface and it allows only one single abstract method
+public interface Interf{
+
+}
+
+
+SCENARIO 2: INVALID (Compile Time Error :Unexpected @FunctionalInterface,Multiple non overriding abstract method present in interface interf)
+
+***************************************************
+
+@Functionalinterface
+public interface Interf{
+	public void m1();
+	public void m2();
+}
+
+
+FUNCTIONAL INTERFACE WITH RESPECT TO INHERITANCE
+
+=========================================================================================================================================================================
+
+
+CASE 1 : If an interface extends functional interface and child interface does not contain any abstract method then child interface is always functional interface
+
+***************************************************
+
+@FunctionalInteface
+interface Parent{
+	public void m1();
+}
+
+
+@FunctinalInterface
+interface Child extends Parent{
+	//NO ABSTRACT METHODS
+}
+
+
+CASE 2 : In the child interface we can define exactly same parent interface abstract method (Method Overloading)
+
+***************************************************
+
+@FunctionalInteface
+interface Parent{
+	public void m1();
+}
+
+
+@FunctinalInterface
+interface Child extends Parent{
+	public void m1();
+}
+
+CASE 3 : In the child interface we can't define any new Abstract method otherwise we will get compile time error.
+
+***************************************************
+
+@FunctionalInteface
+interface Parent{
+	public void m1();
+}
+
+
+@FunctinalInterface
+interface Child extends Parent{
+	public void m2(); ->COMPILE TIME ERROR
+}
+
+COMPILE TIME ERROR EXPCEPTION: Unexpected @FunctionalInterface Annotation multiple non overriding Abstract method found in interface C
+
+
+
+CASE 4: In the child interface we dont define it as functional interface,then we can define any number of abstract methods.
+
+***************************************************
+
+@FunctionalInteface
+interface Parent{
+	public void m1();
+}
+
+
+
+interface Child extends Parent{
+	public void m2(); ->NO COMPILE TIME ERROR
+}
+
+
+
+
+
