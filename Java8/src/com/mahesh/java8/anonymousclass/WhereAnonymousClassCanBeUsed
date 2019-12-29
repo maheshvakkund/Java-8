@@ -1,0 +1,57 @@
+CASE 1 : Anonymous Inner class that extends Abstract class
+
+==============================================================================================================================
+
+abstract class Test{
+}
+
+Test t=new Test()
+//Anonymous inner class
+{
+};
+
+
+CASE 2: Anonymous inner class that extends Concrete class
+
+==============================================================================================================================
+
+class Test{
+}
+Test t = new Test();
+{
+};
+
+
+CASE 3: Anonymous inner class that implements an Interface which contains multiple method.
+
+==============================================================================================================================
+
+interface Test{
+	public void m1();
+	public void m2();
+	public void m3():
+}
+
+Test t=new Test()
+{	
+	public void m1();
+	public void m2();
+	public void m3();
+}
+
+
+CASE 4: Anonymous inner class that implements an interface which contains only one single abstract method.
+
+==============================================================================================================================
+
+/*
+* WE CAN APPLY LAMBDA EXPRESSIONS ONLY IN THIS SCENARIO
+*/
+interface Test{
+	public void m1();
+}
+Test t=new Test()
+{
+	public void m1(){
+	}
+}  

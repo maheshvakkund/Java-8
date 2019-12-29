@@ -1,0 +1,25 @@
+DIFFERENCES BETWEEN LAMBDA EXPRESSION AND ANONYMOUS INNER CLASS:
+
+ANONYMOUS INNER CLASS                                                                               
+
+1)Anonymous inner class is a CLASS without name.
+2)Anonymous inner class can extend Abstract and Concrete classes.
+3)Anonymous inner class can extend an interface that contains ANY number of methods.
+4)Inside Anonymous inner class we can declare instance variable.
+5)Anonymous inner class CAN BE instantiated.
+6)Inside Anonymous inner class THIS KEYWORD always refers to Current Anonymous Inner class Object but not outer class.
+7)Best choice if we want to handle multiple methods.
+8)For Anonymous inner class a seperate class file will be generated at the time of compilation.
+9)Memory will be allocated on demand when we are creating object.
+
+LAMBDA EXPRESSION
+
+1)Lambda Expression is a FUNCTION without name .                                                                                        
+2)Lambda Expression can extend Abstract and Concrete classes.
+3)Lambda Expression can extend an interface that contains ONLY ONE method.
+4)Inside Lambda Expression  we can't declare instance variable ,whatever variable are considered as local variable.
+5)Lambda Expression CANNOT BE instantiated.
+6)Inside Lambda Expression THIS KEYWORD always refers to Current  outer class object. 
+7)Best choice if we want to handle SINGLE ABSTRACT METHOD.
+8)For Lambda Expression  a seperate class file will not  be generated at the time of compilation.
+9)Will reside in Method area of JVM.
